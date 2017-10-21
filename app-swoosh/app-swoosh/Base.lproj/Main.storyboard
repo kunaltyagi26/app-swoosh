@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -132,6 +132,9 @@
                                         <state key="normal" title="Men">
                                             <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMenTapped:" destination="78z-xt-vTL" eventType="touchUpInside" id="1zL-u7-6Zb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLS-3N-Wsd" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="63" width="343" height="43"/>
@@ -140,6 +143,9 @@
                                         <state key="normal" title="Women">
                                             <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomenTapped:" destination="78z-xt-vTL" eventType="touchUpInside" id="eb3-DQ-SWV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-de-UR8" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="126" width="343" height="43"/>
@@ -148,6 +154,9 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="78z-xt-vTL" eventType="touchUpInside" id="uT1-s3-ur3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -159,14 +168,14 @@
                                     <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZHn-nT-ElZ" kind="show" id="Txj-AR-r0e"/>
+                                    <action selector="onNextTapped:" destination="78z-xt-vTL" eventType="touchUpInside" id="IGm-oc-dsu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaQ-6W-LDQ">
                                 <rect key="frame" x="16" y="14" width="29" height="24"/>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="th8-Lw-2d1" kind="unwind" unwindAction="unwindfromSkillVCWithUnwindSegue:" id="egF-yu-JJq"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xzt-OR-TPC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,9 +199,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gXW-di-fb2"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="JUK-9B-mqV" id="Fc8-hc-Inb"/>
+                        <segue destination="ZHn-nT-ElZ" kind="show" identifier="skillVCSegue" id="EZc-yf-373"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0dZ-ha-Scb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="th8-Lw-2d1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="134.48275862068968"/>
         </scene>
@@ -211,7 +223,7 @@
                                 <rect key="frame" x="16" y="14" width="29" height="24"/>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="Vzi-0M-HJa" kind="unwind" unwindAction="unwindfromSkillVCWithUnwindSegue:" id="l3o-qe-nkx"/>
+                                    <segue destination="78z-xt-vTL" kind="show" id="7RA-8r-vNg"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="T15-sI-a1o">
@@ -221,7 +233,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="151.5" height="43"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="Men">
+                                        <state key="normal" title="Beginner">
                                             <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
@@ -283,7 +295,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pM-JC-p9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Vzi-0M-HJa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1546" y="134"/>
         </scene>
@@ -295,4 +306,8 @@
         <image name="swooshLogo" width="119" height="20"/>
         <image name="welcomeScreenBG" width="414" height="736"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EZc-yf-373"/>
+        <segue reference="7RA-8r-vNg"/>
+    </inferredMetricsTieBreakers>
 </document>
