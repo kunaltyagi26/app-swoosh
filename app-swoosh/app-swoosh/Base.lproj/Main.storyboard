@@ -241,7 +241,7 @@
                                         <rect key="frame" x="191.5" y="0.0" width="151.5" height="43"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
-                                        <state key="normal" title="Women">
+                                        <state key="normal" title="Baller">
                                             <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                     </button>
@@ -307,7 +307,6 @@
         <image name="welcomeScreenBG" width="414" height="736"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EZc-yf-373"/>
         <segue reference="7RA-8r-vNg"/>
     </inferredMetricsTieBreakers>
 </document>
